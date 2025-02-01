@@ -40,18 +40,12 @@ def test_audio_conversion():
     
     # Process audio file
     processor = AudioProcessor()
-    
-    # Process and save results for recorded audio
-    print("\nProcessing recorded audio:")
     result = processor.process_call(str(temp_file))
+    
+    # Save only the transcribed text
     output_file = output_dir / f"transcription_{timestamp}.txt"
     with open(output_file, 'w') as f:
-        f.write("=== Audio Transcription Results ===\n")
-        f.write(f"Timestamp: {timestamp}\n")
-        f.write(f"Success: {result['success']}\n")
-        f.write(f"Transcribed text: {result['text']}\n")
-        if result['embedding'] is not None:
-            f.write(f"Embedding size: {len(result['embedding'])}\n")
+        f.write(result['text'])
     
     # Clean up temporary audio files
     temp_file.unlink()
@@ -59,8 +53,6 @@ def test_audio_conversion():
     
     # Print results to console
     print(f"\nResults saved to: {output_file}")
-    with open(output_file, 'r') as f:
-        print(f.read())
 
 if __name__ == "__main__":
     test_audio_conversion()
