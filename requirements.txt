@@ -1,6 +1,6 @@
 speechrecognition
-transformers
-torch
+transformers>=4.30.0
+torch>=2.0.0
 soundfile
 pytest
 black
@@ -9,3 +9,4 @@ flake8
 mypy
 sounddevice
 numpy
+scikit-learn
