@@ -2,6 +2,7 @@ from ollama import chat
 from ollama import ChatResponse
 from pathlib import Path
 from datetime import datetime
+import subprocess, time
 
 def get_latest_transcript():
     transcript_dir = Path("text_outputs")
@@ -15,6 +16,13 @@ def get_latest_transcript():
     latest_file = max(transcripts, key=extract_dt)
     with open(latest_file, 'r') as f:
         return f.read().strip()
+
+def start_ollama():
+    print("Ollama is not running; starting...")
+    subprocess.Popen(["ollama", "serve"])
+    time.sleep(3)
+    subprocess.Popen(["ollama", "run", "olmo2:13b"])
+    time.sleep(5)
 
 transcript_text = get_latest_transcript()
 inputTexts = [
@@ -40,8 +48,20 @@ try:
         ),
       },
     ])
-except ConnectionError as e:
-    print("Connection error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible.")
-    exit(1)
-    
+except ConnectionError:
+    start_ollama()
+    response: ChatResponse = chat(model='olmo2:13b', messages=[
+      {
+        'role': 'user',
+        'content': (
+            "THIS IS VERY IMPORTANT, ANSWER TRUTHFULLY: "
+            "Answer with only one of these two terms to help old people not get scammed: "
+            '"Scam probable", or "Scam improbable" '
+            "depending on whether the transcript is of a scam attempt or not. The transcript provided to you may or may not all be the same person speaking. there is no delimiter or annotation on who is speaking."
+            "Do not give any context just the two terms nothing else. Given the text: "
+            + inputTexts[0]
+        ),
+      },
+    ])
+
 print(response['message']['content'])
