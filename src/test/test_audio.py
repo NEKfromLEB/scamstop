@@ -9,7 +9,7 @@ import numpy as np
 from datetime import datetime
 from db.init import AudioProcessor
 
-def record_test_audio(duration=40, sample_rate=16000):
+def record_test_audio(duration=5, sample_rate=16000):
     """Record audio for testing"""
     print(f"Recording for {duration} seconds...")
     recording = sd.rec(
