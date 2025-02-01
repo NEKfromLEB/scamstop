@@ -2,7 +2,7 @@ import sounddevice as sd
 import soundfile as sf
 import numpy as np
 from pathlib import Path
-from db.init import AudioProcessor
+from init import AudioProcessor
 
 def record_test_audio(duration=5, sample_rate=16000):
     """Record audio for testing"""
