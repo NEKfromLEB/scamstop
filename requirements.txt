@@ -10,3 +10,4 @@ mypy
 sounddevice
 numpy
 scikit-learn
+ollama

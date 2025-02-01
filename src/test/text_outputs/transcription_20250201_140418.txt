@@ -1,0 +1,5 @@
+=== Audio Transcription Results ===
+Timestamp: 20250201_140418
+Success: True
+Transcribed text: hello dog
+Embedding size: 1
