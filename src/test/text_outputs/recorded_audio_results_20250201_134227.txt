@@ -1,0 +1,5 @@
+=== Recorded Audio Results ===
+Timestamp: 20250201_134227
+Success: True
+Transcribed text: hello output text output please output
+Embedding size: 1

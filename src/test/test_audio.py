@@ -1,8 +1,13 @@
+import sys
+from pathlib import Path
+# Add parent directory to system path
+sys.path.append(str(Path(__file__).parent.parent))
+
 import sounddevice as sd
 import soundfile as sf
 import numpy as np
-from pathlib import Path
-from src.db.init import AudioProcessor
+from datetime import datetime
+from db.init import AudioProcessor
 
 def record_test_audio(duration=5, sample_rate=16000):
     """Record audio for testing"""
@@ -15,43 +20,39 @@ def record_test_audio(duration=5, sample_rate=16000):
     sd.wait()  # Wait until recording is finished
     return recording
 
-def save_audio(recording, filename="test_recording.wav", sample_rate=16000):
-    """Save the recorded audio"""
-    sf.write(filename, recording, sample_rate)
-    return filename
-
 def test_audio_conversion():
-    # Create test directory if it doesn't exist
-    test_dir = Path("test_audio")
-    test_dir.mkdir(exist_ok=True)
+    # Create output directory for text files
+    output_dir = Path("text_outputs")
+    output_dir.mkdir(exist_ok=True)
     
-    # Option 1: Record live audio
-    print("Option 1: Record live audio")
+    # Generate timestamp for unique filenames
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    # Create temporary directory for audio files
+    temp_dir = Path("temp_audio")
+    temp_dir.mkdir(exist_ok=True)
+    
+    # Record live audio
+    print("Recording live audio...")
     recording = record_test_audio()
-    test_file = test_dir / "test_recording.wav"
-    save_audio(recording, str(test_file))
+    temp_file = temp_dir / "temp_recording.wav"
+    sf.write(str(temp_file), recording, 16000)
     
-    # Option 2: Create a test tone
-    print("\nOption 2: Generate test tone")
-    duration = 3  # seconds
-    sample_rate = 16000
-    t = np.linspace(0, duration, int(sample_rate * duration))
-    test_tone = 0.5 * np.sin(2 * np.pi * 440 * t)  # 440 Hz tone
-    test_tone_file = test_dir / "test_tone.wav"
-    sf.write(str(test_tone_file), test_tone, sample_rate)
-    
-    # Process both audio files
+    # Process audio file
     processor = AudioProcessor()
+    result = processor.process_call(str(temp_file))
     
-    print("\nProcessing recorded audio:")
-    result1 = processor.process_call(str(test_file))
-    print(f"Success: {result1['success']}")
-    print(f"Transcribed text: {result1['text']}")
+    # Save only the transcribed text
+    output_file = output_dir / f"transcription_{timestamp}.txt"
+    with open(output_file, 'w') as f:
+        f.write(result['text'])
     
-    print("\nProcessing test tone:")
-    result2 = processor.process_call(str(test_tone_file))
-    print(f"Success: {result2['success']}")
-    print(f"Transcribed text: {result2['text']}")
+    # Clean up temporary audio files
+    temp_file.unlink()
+    temp_dir.rmdir()
+    
+    # Print results to console
+    print(f"\nResults saved to: {output_file}")
 
 if __name__ == "__main__":
     test_audio_conversion()
