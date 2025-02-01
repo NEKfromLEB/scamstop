@@ -6,4 +6,6 @@ pytest
 black
 isort
 flake8
-mypy 
+mypy
+sounddevice
+numpy
