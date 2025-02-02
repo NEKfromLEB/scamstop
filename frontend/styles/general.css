@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 55px;
+}
+
+p {
+  font-family: "DM Serif Text";
+  font-weight: 400;
+}
