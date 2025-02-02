@@ -102,9 +102,7 @@
       const stopRecordButton = document.querySelector('#stop-record');
 
       if (startRecordButton) {
-        console.log("Start Record button found");
         startRecordButton.addEventListener('click', () => {
-          console.log("Start Recording button clicked");
           fetch('http://localhost:5000/start_recording', { method: 'POST' })
             .then(response => response.json())
             .then(data => console.log("Started:", data))
@@ -115,9 +113,7 @@
       }
 
       if (stopRecordButton) {
-        console.log("Stop Record button found");
         stopRecordButton.addEventListener('click', () => {
-          console.log("Stop Recording button clicked");
           fetch('http://localhost:5000/stop_recording', { method: 'POST' })
             .then(response => response.json())
             .then(data => console.log("Stopped:", data))
@@ -138,15 +134,28 @@
           .catch(error => console.error('Error:', error));
       });
 
-      // NEW: Polling for real-time updates every 5 seconds
+      // Get the update box element once, outside the interval
+      const updateBox = document.querySelector('#real-time-updates');
+      if (!updateBox) {
+        console.error("Could not find real-time-updates element on page load");
+      }
+
+      // Polling for real-time updates every 2 seconds
       const updateInterval = setInterval(() => {
-        fetch('http://localhost:5000/detect_scam')
-          .then(response => response.json())
-          .then(data => {
-            document.querySelector('#real-time-updates').innerText = data.detection_result;
-          })
-          .catch(error => console.error('Error:', error));
-      }, 5000);
+        fetch('http://localhost:5000/detect_scam', {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.detection_result) {
+            document.getElementById('real-time-updates').textContent = data.detection_result;
+          }
+        })
+        .catch(error => console.error('Detection error:', error));
+      }, 2000);
 
       // Clear interval when stop recording is pressed
       stopRecordButton.addEventListener('click', () => {
