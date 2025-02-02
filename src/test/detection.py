@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import subprocess, time, os
 
-# Define the base directory relative to this file
+# Define BASE_DIR relative to this file
 BASE_DIR = Path(__file__).resolve().parent
 
 text_file = ""
@@ -90,17 +90,20 @@ def call_llm():
             ])
         else:
             raise
-    print(response['message']['content'])
+    result_content = response['message']['content']
+    print(result_content)
+    return result_content  # NEW: return the result
 
-# Get transcript and set file_path based on BASE_DIR
-transcript_text = get_latest_transcript()
-file_path = str(text_file)
-if not is_ollama_running():
-    start_ollama()
-call_llm()
-
-while True:
-    detect_file_changes()  # Wait for file change then call_llm
+if __name__ == "__main__":
+    # Get transcript and set file_path based on BASE_DIR
+    transcript_text = get_latest_transcript()
+    file_path = str(text_file)
+    if not is_ollama_running():
+        start_ollama()
     call_llm()
+
+    while True:
+        detect_file_changes()  # Wait for file change then call_llm
+        call_llm()
 
 

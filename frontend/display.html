@@ -87,7 +87,31 @@
       <img src="icons/linked-in-grey.jpg" alt=""> 
       <img src="icons/github-grey.jpg" alt="">
       <img src="icons/instagram-grey.jpg" alt="">
+      <!-- NEW: Add scam detection button and display container -->
+      <button class="detect-scam-button">Check Scam Detection</button>
+      <div class="detection-result"></div>
+    </div>
 
+    <script>
+      // Hook up the "Start Recording Now" button to trigger the backend endpoint
+      document.querySelector('.main-record-button').addEventListener('click', () => {
+        fetch('http://localhost:5000/start_recording', { method: 'POST' })
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error));
+      });
+      
+      // NEW: Hook up the "Check Scam Detection" button to call the detection endpoint
+      document.querySelector('.detect-scam-button').addEventListener('click', () => {
+        fetch('http://localhost:5000/detect_scam')
+          .then(response => response.json())
+          .then(data => {
+            document.querySelector('.detection-result').innerText = data.detection_result;
+            console.log(data);
+          })
+          .catch(error => console.error('Error:', error));
+      });
+    </script>
 
   </body>
 </html>
