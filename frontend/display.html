@@ -46,7 +46,8 @@
             Built by students, made for everyone.
           </p>
         </div>
-        <button class="main-record-button">Start Recording Now</button>
+        <button id="start-record" class="main-record-button">Start Recording Now</button>
+        <button id="stop-record" class="main-record-button" style="margin-top:1px;">Stop Recording</button>
       </div>
 
       <div class="main-image-container">
@@ -94,14 +95,22 @@
 
     <script>
       // Hook up the "Start Recording Now" button to trigger the backend endpoint
-      document.querySelector('.main-record-button').addEventListener('click', () => {
+      document.querySelector('#start-record').addEventListener('click', () => {
         fetch('http://localhost:5000/start_recording', { method: 'POST' })
           .then(response => response.json())
-          .then(data => console.log(data))
-          .catch(error => console.error('Error:', error));
+          .then(data => console.log("Started:", data))
+          .catch(error => console.error("Error starting recording:", error));
       });
-      
-      // NEW: Hook up the "Check Scam Detection" button to call the detection endpoint
+
+      // Add event listener for the Stop Recording button using its unique ID
+      document.querySelector('#stop-record').addEventListener('click', () => {
+        fetch('http://localhost:5000/stop_recording', { method: 'POST' })
+          .then(response => response.json())
+          .then(data => console.log("Stopped:", data))
+          .catch(error => console.error("Error stopping recording:", error));
+      });
+
+      // Hook up the "Check Scam Detection" button to call the detection endpoint
       document.querySelector('.detect-scam-button').addEventListener('click', () => {
         fetch('http://localhost:5000/detect_scam')
           .then(response => response.json())

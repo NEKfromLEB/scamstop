@@ -9,6 +9,8 @@ from src.test import detection
 # Updated: Serve static files from the 'frontend' directory
 app = Flask(__name__, static_folder="frontend", static_url_path="")
 
+rec_process = None  # NEW: Global for recording process
+
 # Updated: Serve the index page using Flask's static file serving
 @app.route("/", methods=["GET"])
 def index():
@@ -16,8 +18,24 @@ def index():
 
 @app.route('/start_recording', methods=['POST'])
 def start_recording():
-    subprocess.Popen(["python", "src/test/audio.py"])  # Updated file name
-    return jsonify({"status": "recording started"})
+    global rec_process
+    if rec_process is None:
+        rec_process = subprocess.Popen([sys.executable, "src/test/audioToText.py"])
+        return jsonify({"status": "recording started"})
+    else:
+        return jsonify({"status": "already recording"})
+
+# NEW: Stop endpoint to kill the recording process
+@app.route('/stop_recording', methods=['POST'])
+def stop_recording():
+    global rec_process
+    if rec_process is not None:
+        rec_process.terminate()  # Use terminate instead of kill
+        rec_process.wait()       # Wait for process to clean up
+        rec_process = None
+        return jsonify({"status": "recording stopped"})
+    else:
+        return jsonify({"status": "not recording"})
 
 @app.route('/detect_scam', methods=['GET'])
 def detect_scam():
