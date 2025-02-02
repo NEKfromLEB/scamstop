@@ -48,6 +48,9 @@
         </div>
         <button id="start-record" class="main-record-button">Start Recording Now</button>
         <button id="stop-record" class="main-record-button" style="margin-top:1px;">Stop Recording</button>
+        <div id="real-time-updates" style="text-align: center; font-size: 48px; margin-top: 20px;">
+          Real-time updates will appear here...
+        </div>
       </div>
 
       <div class="main-image-container">
@@ -120,6 +123,16 @@
           })
           .catch(error => console.error('Error:', error));
       });
+
+      // NEW: Polling for real-time updates every 5 seconds
+      setInterval(() => {
+        fetch('http://localhost:5000/detect_scam')
+          .then(response => response.json())
+          .then(data => {
+            document.querySelector('#real-time-updates').innerText = data.detection_result;
+          })
+          .catch(error => console.error('Error:', error));
+      }, 5000);
     </script>
 
   </body>
