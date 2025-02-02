@@ -1637,3 +1637,932 @@ RuntimeError: FFmpeg extension is not available.
 2025-02-02 11:03:12.461 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
 2025-02-02 11:03:12.550 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
 2025-02-02 11:03:12.552 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:06:02.545 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:06:02.548 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:06:02.550 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:06:02.550 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:06:02.928 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:06:02.928 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:06:02.929 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:06:02.929 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:06:02.929 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:06:02.930 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:06:02.930 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:06:02.930 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:06:02.962 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:06:02.962 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:06:02.962 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:06:03.768 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:06:03.768 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:06:03.768 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:06:03.769 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:06:03.769 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:06:05.648 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:06:05.648 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:06:05.648 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:06:05.648 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:06:09.869 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:06:09.870 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 83968
+2025-02-02 11:06:09.870 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:06:09.959 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:06:09.959 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:06:09.968 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:06:10.517 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:06:10.558 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.60 seconds
+2025-02-02 11:06:10.558 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:06:10.558 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:06:10.558 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:06:30.930 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:06:30.930 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:06:30.930 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:06:30.930 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:06:32.787 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:06:32.789 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 46080
+2025-02-02 11:06:32.789 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:06:32.811 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:06:32.813 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:06:32.820 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:06:33.262 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:06:33.301 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.49 seconds
+2025-02-02 11:06:33.301 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:06:33.301 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:06:33.302 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:06:50.499 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-02-02 11:06:50.499 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-02-02 11:06:50.500 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-02-02 11:06:50.506 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-02-02 11:06:50.809 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-02-02 11:06:50.809 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-02-02 11:06:50.849 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-02-02 11:08:06.876 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:08:06.880 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:08:06.883 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:08:06.883 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:08:07.298 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:08:07.298 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:08:07.300 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:08:07.300 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:08:07.300 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:08:07.301 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:08:07.301 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:08:07.301 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:08:07.343 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:08:07.343 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:08:07.343 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:08:08.074 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:08:08.074 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:08:08.074 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:08:08.074 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:08:08.074 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:08:37.561 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:08:37.561 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:08:37.561 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:08:37.562 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:08:38.713 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:08:38.716 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 34816
+2025-02-02 11:08:38.716 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:08:38.805 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:08:38.807 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:08:38.826 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:08:39.228 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:08:39.237 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.43 seconds
+2025-02-02 11:08:39.237 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:08:39.237 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:08:39.237 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:08:43.581 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:08:43.581 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:08:43.582 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:08:43.582 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:08:46.333 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:08:46.333 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 60416
+2025-02-02 11:08:46.333 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:08:46.380 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:08:46.381 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:08:46.390 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:08:46.852 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:08:46.864 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.48 seconds
+2025-02-02 11:08:46.864 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:08:46.864 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:08:46.864 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:08:47.098 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:08:47.098 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:08:47.098 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:08:47.099 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:08:50.236 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:08:50.238 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 66560
+2025-02-02 11:08:50.238 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:08:50.306 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:08:50.307 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:08:50.311 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:08:50.747 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:08:50.784 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.48 seconds
+2025-02-02 11:08:50.784 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:08:50.784 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:08:50.784 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:08:51.193 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:08:51.193 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:08:51.193 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:08:51.193 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:08:55.992 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:08:55.992 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 93184
+2025-02-02 11:08:55.992 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:08:56.047 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:08:56.048 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:08:56.059 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:08:56.528 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:08:56.583 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.53 seconds
+2025-02-02 11:08:56.583 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:08:56.583 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:08:56.583 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:09:04.763 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:09:04.763 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:09:04.763 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:09:04.763 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:09:06.556 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:09:06.557 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 45056
+2025-02-02 11:09:06.558 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:09:06.559 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:09:06.561 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:09:06.564 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:09:07.010 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:09:07.020 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.46 seconds
+2025-02-02 11:09:07.020 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:09:07.020 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:09:07.020 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:18:11.435 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:18:11.440 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:18:11.442 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:18:11.443 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:18:11.863 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:18:11.864 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:18:11.865 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:18:11.865 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:18:11.865 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:18:11.865 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:18:11.865 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:18:11.866 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:18:11.906 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:18:11.906 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:18:11.906 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:18:12.641 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:18:12.641 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:18:12.642 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:18:12.642 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:18:12.642 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:18:18.658 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:18:18.658 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:18:18.658 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:18:18.658 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:18:19.814 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:18:19.815 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 34816
+2025-02-02 11:18:19.815 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:18:19.846 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:18:19.846 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:18:19.866 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:18:20.300 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:18:20.340 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.49 seconds
+2025-02-02 11:18:20.340 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:18:20.340 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:18:20.341 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:18:24.488 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:18:24.488 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:18:24.488 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:18:24.488 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:18:27.555 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:18:27.555 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 65536
+2025-02-02 11:18:27.555 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:18:27.623 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:18:27.624 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:18:27.651 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:18:28.127 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:18:28.144 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.52 seconds
+2025-02-02 11:18:28.145 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:18:28.145 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:18:28.145 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:19:00.385 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-02-02 11:19:00.390 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-02-02 11:19:00.394 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-02-02 11:19:00.397 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-02-02 11:19:00.722 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-02-02 11:19:00.722 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-02-02 11:19:00.764 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-02-02 11:20:15.461 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:20:15.466 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:20:15.469 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:20:15.469 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:20:15.890 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:20:15.891 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:20:15.892 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:20:15.893 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:20:15.893 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:20:15.893 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:20:15.893 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:20:15.893 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:20:15.948 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:20:15.948 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:20:15.948 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:20:17.614 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:20:17.617 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:20:17.618 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:20:17.618 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:20:17.622 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:20:19.232 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:20:19.232 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:20:19.232 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:20:19.232 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:20:26.973 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:20:26.975 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 140288
+2025-02-02 11:20:26.975 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:20:27.034 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:20:27.034 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:20:27.052 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:20:27.628 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:20:27.637 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.60 seconds
+2025-02-02 11:20:27.638 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:20:27.638 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:20:27.638 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:20:43.744 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:20:43.745 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:20:43.745 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:20:43.746 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:20:45.536 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:20:45.539 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 45056
+2025-02-02 11:20:45.540 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:20:45.641 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:20:45.645 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:20:45.655 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:20:46.127 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:20:46.136 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.49 seconds
+2025-02-02 11:20:46.136 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:20:46.136 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:20:46.136 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:26:57.423 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:26:57.429 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:26:57.435 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:26:57.435 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:26:57.821 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:26:57.822 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:26:57.824 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:26:57.825 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:26:57.825 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:26:57.826 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:26:57.826 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:26:57.826 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:26:57.886 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:26:57.887 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:26:57.887 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:26:58.789 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:26:58.789 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:26:58.790 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:26:58.790 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:26:58.790 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:27:00.215 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:27:00.215 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:27:00.215 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:27:00.215 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:27:02.587 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:27:02.588 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 54272
+2025-02-02 11:27:02.588 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:27:02.692 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:27:02.692 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:27:02.705 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:27:03.184 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:27:03.222 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.53 seconds
+2025-02-02 11:27:03.222 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:27:03.222 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:27:03.222 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:27:09.625 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:27:09.625 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:27:09.625 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:27:09.625 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:27:13.143 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:27:13.150 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 72704
+2025-02-02 11:27:13.152 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:27:13.154 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:27:13.156 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:27:13.160 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:27:13.704 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:27:13.754 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.60 seconds
+2025-02-02 11:27:13.754 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:27:13.754 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:27:13.754 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:28:34.939 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:28:34.945 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:28:34.949 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:28:34.949 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:28:35.408 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:28:35.409 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:28:35.410 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:28:35.411 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:28:35.411 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:28:35.411 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:28:35.411 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:28:35.411 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:28:35.455 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:28:35.455 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:28:35.456 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:28:36.211 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:28:36.211 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:28:36.211 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:28:36.211 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:28:36.212 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:28:37.201 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:28:37.201 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:28:37.201 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:28:37.201 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:28:41.228 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:28:41.233 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 74240
+2025-02-02 11:28:41.234 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:28:41.280 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:28:41.284 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:28:41.313 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:28:41.845 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:28:41.851 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.57 seconds
+2025-02-02 11:28:41.851 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:28:41.852 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:28:41.852 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:28:47.821 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:28:47.822 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:28:47.822 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:28:47.822 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:28:49.997 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:28:50.003 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 51200
+2025-02-02 11:28:50.003 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:28:50.006 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:28:50.010 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:28:50.021 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:28:50.461 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:28:50.497 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.49 seconds
+2025-02-02 11:28:50.497 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:28:50.497 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:28:50.498 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:30:08.505 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:30:08.511 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:30:08.518 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:30:08.518 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:30:08.967 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:30:08.968 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:30:08.970 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:30:08.970 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:30:08.971 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:30:08.971 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:30:08.971 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:30:08.971 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:30:09.031 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:30:09.031 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:30:09.031 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:30:09.938 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:30:09.939 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:30:09.939 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:30:09.939 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:30:09.939 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:30:10.700 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:30:10.700 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:30:10.700 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:30:10.700 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:30:12.880 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:30:12.881 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 41472
+2025-02-02 11:30:12.881 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:30:12.926 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:30:12.927 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:30:12.930 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:30:13.464 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:30:13.466 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.54 seconds
+2025-02-02 11:30:13.466 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:30:13.466 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:30:13.466 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:31:43.294 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-02 11:31:43.298 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-02-02 11:31:43.301 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-02 11:31:43.301 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-02 11:31:43.706 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-02 11:31:43.707 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so, 0x0006): Library not loaded: @rpath/libavutil.58.dylib
+  Referenced from: <7DA1FD7D-D540-3C89-BD42-7A8ED4EC3111> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg6.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/opt/homebrew/lib/libavutil.58.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.58.dylib' (no such file)
+2025-02-02 11:31:43.711 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-02 11:31:43.711 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so, 0x0006): Library not loaded: @rpath/libavutil.57.dylib
+  Referenced from: <DE9A5D63-A935-330C-9BA8-90240A45E34F> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg5.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/opt/homebrew/lib/libavutil.57.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.57.dylib' (no such file)
+2025-02-02 11:31:43.711 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-02 11:31:43.712 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: dlopen(/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so, 0x0006): Library not loaded: @rpath/libavutil.56.dylib
+  Referenced from: <C052F412-BF97-3CA9-A540-F5B67EF42B15> /Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/lib/libtorio_ffmpeg4.so
+  Reason: tried: '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/opt/homebrew/lib/libavutil.56.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libavutil.56.dylib' (no such file)
+2025-02-02 11:31:43.712 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-02-02 11:31:43.712 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/username/Documents/projects/ScamStop/venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-02-02 11:31:43.784 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-02 11:31:43.785 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-02 11:31:43.785 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-02 11:31:44.831 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-02 11:31:44.831 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-02 11:31:44.831 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:31:44.831 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:31:44.832 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:31:45.457 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:31:45.458 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:31:45.458 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:31:45.458 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:31:46.612 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:31:46.614 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 24064
+2025-02-02 11:31:46.614 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:31:46.635 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:31:46.637 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:31:46.642 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:31:47.061 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:31:47.069 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.43 seconds
+2025-02-02 11:31:47.070 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:31:47.070 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:31:47.070 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:31:47.184 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:31:47.184 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:31:47.184 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:31:47.185 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:31:50.834 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:31:50.841 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 74752
+2025-02-02 11:31:50.841 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:31:50.849 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:31:50.851 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:31:50.855 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:31:51.378 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:31:51.389 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.54 seconds
+2025-02-02 11:31:51.390 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:31:51.390 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:31:51.390 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:31:56.724 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:31:56.725 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:31:56.725 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:31:56.725 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:32:01.202 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:32:01.205 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 88064
+2025-02-02 11:32:01.205 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:32:01.275 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:32:01.277 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:32:01.279 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:32:01.807 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:32:01.821 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.54 seconds
+2025-02-02 11:32:01.821 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:32:01.821 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:32:01.821 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:32:04.146 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:32:04.147 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:32:04.152 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:32:04.152 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:32:06.004 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:32:06.006 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 46080
+2025-02-02 11:32:06.007 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:32:06.042 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:32:06.044 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:32:06.047 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:32:06.467 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:32:06.475 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.43 seconds
+2025-02-02 11:32:06.475 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:32:06.475 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:32:06.475 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-02 11:32:06.774 - RealTimeSTT: root - INFO - voice activity detected
+2025-02-02 11:32:06.774 - RealTimeSTT: root - INFO - recording started
+2025-02-02 11:32:06.775 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-02-02 11:32:06.775 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-02-02 11:32:08.692 - RealTimeSTT: root - INFO - recording stopped
+2025-02-02 11:32:08.692 - RealTimeSTT: root - DEBUG - No samples removed, final audio length: 47104
+2025-02-02 11:32:08.692 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-02-02 11:32:08.740 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-02-02 11:32:08.741 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-02-02 11:32:08.750 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-02-02 11:32:09.159 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-02-02 11:32:09.201 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.46 seconds
+2025-02-02 11:32:09.201 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-02 11:32:09.201 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-02 11:32:09.201 - RealTimeSTT: root - DEBUG - Waiting for recording start

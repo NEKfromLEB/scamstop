@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 text_file = ""
 transcript_text = ""
 file_path = ""
-modelName = "cereals_fierce/llama3.2:latest"
+modelName = "olmo2:13b"
 
 def get_latest_transcript():
     global text_file
@@ -27,15 +27,20 @@ def get_latest_transcript():
     with open(text_file, 'r') as f:
         return f.read().strip()
 
-def detect_file_changes(interval=1):
-    global transcript_text, file_path
-    last_modified = os.path.getmtime(file_path)
+def wait_for_new_transcript(interval=1):
+    global text_file, transcript_text
+    last_known_file = text_file
     while True:
-        current_modified = os.path.getmtime(file_path)
-        if current_modified != last_modified:
-            print("File has changed!")
+        transcript_dir = BASE_DIR / "text_outputs"
+        transcripts = list(transcript_dir.glob("transcription_*.txt"))
+        if not transcripts:
+            time.sleep(interval)
+            continue
+        newest_file = max(transcripts, key=lambda f: f.stat().st_mtime)
+        if newest_file != last_known_file:
+            print("New transcript file found:", newest_file)
+            text_file = newest_file
             transcript_text = get_latest_transcript()
-            last_modified = current_modified
             return True
         time.sleep(interval)
 
@@ -56,6 +61,9 @@ def is_ollama_running(port=11434):
         return True
 
 def call_llm():
+    global transcript_text
+    transcript_text = get_latest_transcript()  # NEW: Force a fresh read from the file
+    print("Sending this text to LLM:\n", transcript_text)  # NEW: log text to console
     print(transcript_text)
     try:
         response: ChatResponse = chat(model=modelName, messages=[
@@ -103,7 +111,7 @@ if __name__ == "__main__":
     call_llm()
 
     while True:
-        detect_file_changes()  # Wait for file change then call_llm
+        wait_for_new_transcript()  # Wait for a newly created file
         call_llm()
 
 

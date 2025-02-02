@@ -97,21 +97,35 @@
     </div>
 
     <script>
-      // Hook up the "Start Recording Now" button to trigger the backend endpoint
-      document.querySelector('#start-record').addEventListener('click', () => {
-        fetch('http://localhost:5000/start_recording', { method: 'POST' })
-          .then(response => response.json())
-          .then(data => console.log("Started:", data))
-          .catch(error => console.error("Error starting recording:", error));
-      });
+      // Ensure the button is correctly selected
+      const startRecordButton = document.querySelector('#start-record');
+      const stopRecordButton = document.querySelector('#stop-record');
 
-      // Add event listener for the Stop Recording button using its unique ID
-      document.querySelector('#stop-record').addEventListener('click', () => {
-        fetch('http://localhost:5000/stop_recording', { method: 'POST' })
-          .then(response => response.json())
-          .then(data => console.log("Stopped:", data))
-          .catch(error => console.error("Error stopping recording:", error));
-      });
+      if (startRecordButton) {
+        console.log("Start Record button found");
+        startRecordButton.addEventListener('click', () => {
+          console.log("Start Recording button clicked");
+          fetch('http://localhost:5000/start_recording', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => console.log("Started:", data))
+            .catch(error => console.error("Error starting recording:", error));
+        });
+      } else {
+        console.error("Start Record button not found");
+      }
+
+      if (stopRecordButton) {
+        console.log("Stop Record button found");
+        stopRecordButton.addEventListener('click', () => {
+          console.log("Stop Recording button clicked");
+          fetch('http://localhost:5000/stop_recording', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => console.log("Stopped:", data))
+            .catch(error => console.error("Error stopping recording:", error));
+        });
+      } else {
+        console.error("Stop Record button not found");
+      }
 
       // Hook up the "Check Scam Detection" button to call the detection endpoint
       document.querySelector('.detect-scam-button').addEventListener('click', () => {
@@ -125,7 +139,7 @@
       });
 
       // NEW: Polling for real-time updates every 5 seconds
-      setInterval(() => {
+      const updateInterval = setInterval(() => {
         fetch('http://localhost:5000/detect_scam')
           .then(response => response.json())
           .then(data => {
@@ -133,6 +147,11 @@
           })
           .catch(error => console.error('Error:', error));
       }, 5000);
+
+      // Clear interval when stop recording is pressed
+      stopRecordButton.addEventListener('click', () => {
+        clearInterval(updateInterval);
+      });
     </script>
 
   </body>
