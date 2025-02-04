@@ -61,4 +61,7 @@ def detect_scam():
         return jsonify({"detection_result": str(e)})
 
 if __name__ == "__main__":
+    # NEW: Ensure Ollama is running before starting the server
+    if not detection.is_ollama_running():
+        detection.start_ollama()
     app.run(debug=True, port=5000)
