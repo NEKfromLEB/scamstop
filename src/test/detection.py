@@ -91,7 +91,7 @@ def call_llm():
                 'content': (
                     "THIS IS VERY IMPORTANT, ANSWER TRUTHFULLY: "
                     "Answer with only one of these two terms to help old people not get scammed: "
-                    '"Scam probable", or "Scam improbable" '
+                    '"Scam likely", or "Scam unlikely" '
                     "depending on whether the transcript is of a scam attempt or not. "
                     "Do not give any context just the two terms nothing else. Given the text: "
                     + transcript_text
@@ -108,7 +108,7 @@ def call_llm():
                     'content': (
                         "THIS IS VERY IMPORTANT, ANSWER TRUTHFULLY: "
                         "Answer with only one of these two terms to help old people not get scammed: "
-                        '"Scam probable", or "Scam improbable" '
+                        '"Scam likely", or "Scam unlikely" '
                         "depending on whether the transcript is of a scam attempt or not. "
                         "Do not give any context just the two terms nothing else. Given the text: "
                         + transcript_text
