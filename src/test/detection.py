@@ -7,6 +7,9 @@ import subprocess, time, os
 # Define BASE_DIR relative to this file
 BASE_DIR = Path(__file__).resolve().parent
 
+# NEW: Define server start time to ignore older transcript files
+SERVER_START_TIME = datetime.now()
+
 text_file = ""
 transcript_text = ""
 file_path = ""
@@ -17,13 +20,23 @@ def get_latest_transcript():
     # Use BASE_DIR for transcripts directory
     transcript_dir = BASE_DIR / "text_outputs"
     transcripts = list(transcript_dir.glob("transcription_*.txt"))
-    if not transcripts:
-        raise Exception("No transcription files found")
+    # Filter to only include transcripts created after server start
+    valid_transcripts = []
+    for t in transcripts:
+        parts = t.stem.split('_')
+        try:
+            file_time = datetime.strptime(parts[1] + '_' + parts[2], "%Y%m%d_%H%M%S")
+            if file_time > SERVER_START_TIME:
+                valid_transcripts.append(t)
+        except Exception:
+            continue
+    if not valid_transcripts:
+        raise Exception("No new transcript file found")
     def extract_dt(p):
         # filename format: transcription_yyyymmdd_hhmmss.txt
         parts = p.stem.split('_')
         return datetime.strptime(parts[1] + '_' + parts[2], "%Y%m%d_%H%M%S")
-    text_file = max(transcripts, key=extract_dt)
+    text_file = max(valid_transcripts, key=extract_dt)
     with open(text_file, 'r') as f:
         return f.read().strip()
 
@@ -33,15 +46,22 @@ def wait_for_new_transcript(interval=1):
     while True:
         transcript_dir = BASE_DIR / "text_outputs"
         transcripts = list(transcript_dir.glob("transcription_*.txt"))
-        if not transcripts:
-            time.sleep(interval)
-            continue
-        newest_file = max(transcripts, key=lambda f: f.stat().st_mtime)
-        if newest_file != last_known_file:
-            print("New transcript file found:", newest_file)
-            text_file = newest_file
-            transcript_text = get_latest_transcript()
-            return True
+        valid_transcripts = []
+        for t in transcripts:
+            parts = t.stem.split('_')
+            try:
+                file_time = datetime.strptime(parts[1] + '_' + parts[2], "%Y%m%d_%H%M%S")
+                if file_time > SERVER_START_TIME:
+                    valid_transcripts.append(t)
+            except Exception:
+                continue
+        if valid_transcripts:
+            newest_file = max(valid_transcripts, key=lambda f: f.stat().st_mtime)
+            if newest_file != last_known_file:
+                print("New transcript file found:", newest_file)
+                text_file = newest_file
+                transcript_text = get_latest_transcript()
+                return True
         time.sleep(interval)
 
 def start_ollama():
@@ -62,9 +82,8 @@ def is_ollama_running(port=11434):
 
 def call_llm():
     global transcript_text
-    transcript_text = get_latest_transcript()  # NEW: Force a fresh read from the file
-    print("Sending this text to LLM:\n", transcript_text)  # NEW: log text to console
-    print(transcript_text)
+    transcript_text = get_latest_transcript()  # Force a fresh read from the new file
+    print("Sending this text to LLM:\n", transcript_text)
     try:
         response: ChatResponse = chat(model=modelName, messages=[
             {
@@ -100,18 +119,14 @@ def call_llm():
             raise
     result_content = response['message']['content']
     print(result_content)
-    return result_content  # NEW: return the result
+    return result_content
 
 if __name__ == "__main__":
-    # Get transcript and set file_path based on BASE_DIR
-    transcript_text = get_latest_transcript()
-    file_path = str(text_file)
+    # Remain silent on any existing transcript at startup.
     if not is_ollama_running():
         start_ollama()
-    call_llm()
-
     while True:
-        wait_for_new_transcript()  # Wait for a newly created file
+        wait_for_new_transcript()  # Wait for a newly created file after server startup
         call_llm()
 
 
