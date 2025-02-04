@@ -51,10 +51,13 @@ def stop_recording():
 
 @app.route('/detect_scam', methods=['GET'])
 def detect_scam():
+    # NEW: Only run detection if recording has been started.
+    if rec_process is None:
+        return jsonify({"detection_result": "Recording not started"}), 400
     try:
         result = detection.call_llm()
         response = jsonify({"detection_result": result})
-        response.headers.add('Access-Control-Allow-Origin', '*')  # NEW: Ensure CORS headers
+        response.headers.add('Access-Control-Allow-Origin', '*')
         return response
     except Exception as e:
         print(f"Error in detect_scam: {str(e)}")

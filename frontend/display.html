@@ -150,8 +150,9 @@
         })
         .then(response => response.json())
         .then(data => {
-          if (data && data.detection_result) {
-            document.getElementById('real-time-updates').textContent = data.detection_result;
+          // Only update the real-time field if detection has started
+          if (data && data.detection_result && data.detection_result !== "Recording not started") {
+            updateBox.textContent = data.detection_result;
           }
         })
         .catch(error => console.error('Detection error:', error));
