@@ -45,11 +45,11 @@ def wait_for_new_transcript(interval=1):
         time.sleep(interval)
 
 def start_ollama():
-    print("Ollama is not running; starting...")
-    subprocess.Popen(["ollama", "serve"])
+    print("Ollama is not running; starting headless...")
+    # NEW: Launch ollama headlessly in the background.
+    subprocess.Popen("ollama serve; sleep 3; ollama run olmo2:13b", shell=True, 
+                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     time.sleep(3)
-    subprocess.Popen(["ollama", "run", "olmo2:13b"])
-    time.sleep(5)
 
 def is_ollama_running(port=11434):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
