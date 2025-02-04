@@ -31,7 +31,7 @@ def get_latest_transcript():
         except Exception:
             continue
     if not valid_transcripts:
-        raise Exception("No new transcript file found")
+        raise Exception("Waiting for transcription...")
     def extract_dt(p):
         # filename format: transcription_yyyymmdd_hhmmss.txt
         parts = p.stem.split('_')
